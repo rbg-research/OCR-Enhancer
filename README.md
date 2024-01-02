@@ -20,5 +20,19 @@ The pipeline begins with creating binary segmentation masks using the color k-me
 ![Workflow](images/workflow.png)
 _Proposed approach to perform text segmentation and OCR_
 
-![image](images\super-resolution input text image.png)
+## Results
+
+Six experiments were conducted using a permutation of two architectures and two super-resolution techniques to determine the model that yields the best eval- uation metrics on the validation split of the OCR-SBT dataset. The best pre- dictions obtained on validation data samples are shown in Figure 4. It is evident from the above predictions that the model gives immaculate qualitative results despite variations in font style, alignment, thickness, background information, and multi-color text, as the binarization retains all the foreground information and removes most of the background.
+
+|OCR-SBT Data|Model|IoU(%)|Dice|
+|----------|------------|-----------------------|-----------------------|
+|Raw Data |UNet | 94.26 | 95.06|
+|Raw Data|UNet3+  | 95.38 | 95.73|
+|Raw Data + ESRGAN | UNet  | 95.25 | 95.77|
+|Raw Data + ESRGAN | UNet3+  | 97.16 | 97.97|
+|Raw Data + SD | UNet  | 99.06 | 99.21|
+|Raw Data + SD | UNet3+  | 99.49 | 99.56|
+
+![image](images/output.png)
 _Predictions obtained by the UNet3+ architecture on super-resolution input text image_
+
