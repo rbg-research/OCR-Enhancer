@@ -10,10 +10,10 @@ The Best Paper award-winning paper is submitted at the 5th International Confere
 
 The OCR-SBT Dataset This research uses a painstakingly selected dataset of synthetic text pictures to perform OCR with Scene Binarized Text (OCR-SBT). The raw images on which binarization had to be performed were taken from the SynthTiger Dataset library, which holds an astounding 10.7 million images with a single word. Thus, it includes various changes and variants to thoroughly test and assess our suggested OCR-enhancing strategy. With an emphasis on English, the subset of 1,684 text images on which binarization was performed reflects a cross-section of this sizable dataset.
 
-![Sample images and binary segmentation masks of the dataset introduced](images/dataset.jpg)
+![Sample images and binary segmentation masks of the dataset introduced](images/dataset.png)
 
 ## Proposed Methodology
 
 The pipeline begins with creating binary segmentation masks using the color k-means technique to separate the text foreground from the background. Then, UNet and UNet3+, two different segmentation architectures, are used to train reliable binary segmentation models that can effectively isolate text sections. The pipeline also contains image super-resolution algorithms - the ESRGAN and Stable Diffusion methods to improve the quality of the raw text pictures for further enhancement. The study demonstrates significant gains in OCR performance using this integrated approach, especially for text images with complex backgrounds and varied properties.
 
-![Proposed approach to perform text segmentation and OCR](images/workflow.jpg)
+![Proposed approach to perform text segmentation and OCR](images/workflow.png)
